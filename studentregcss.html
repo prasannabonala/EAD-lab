@@ -1,0 +1,71 @@
+<h1>student registration form</h1>
+<style>
+    body {
+      font-family: sans-serif;
+      background-color: #e7f0e3;
+      padding: 10px;
+    }
+
+    form {
+      background-color: #94e184;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    label {
+      
+      margin-top: 10px;
+    }
+
+    input, select {
+      width:- 90%;
+      padding: 3px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    
+
+    .submit-btn {
+      margin-top: 15px;
+      background-color: #56bb5a;
+      color: rgb(133, 224, 100);
+      border: none;
+      padding: 10px;
+      width: 100%;
+      
+    }
+
+    
+  </style>
+
+<form action="action_page.php" method="post">
+    <label style="text-align:center;" for="student name">name :</label>
+    <input type="text" id="student name"name="student_name" required><br><br> 
+    <label style="text-align:center;" for="student rollno"> rollno:</label>
+    <input type="text" id="student rollno" name="student_rollno" required><br><br>
+    <label for="email">email :</label>
+    <input for="email" id="email" > </input><br><br>
+    <label for="phone">phone:</label>
+    <input type="phone" id="phone" name="phone" required>
+
+    <br><br>
+
+    <label>gender:</label>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="'male">male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">female</label><br><br>
+    
+    <label for="branch"> branch: </label>
+    <select name="branch" id="branch">
+    <option value="cse">cse</option>
+    <option value="ece">ece</option>   
+    <option value="it">it</option>
+    <option value="mech">mech</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+
