@@ -1,73 +1,50 @@
-<h1>Feedbackform</h1>
-<form action="action_page.php" method="post">
-<label for="name">Name:</label>
-<input type="text" id="name" name="name" required><br><br>
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" required><br><br>
-<label for="feedbackform">feedback: </label><br><br>
-<textarea id="feedbackform" name="feedbackform" rows="3" cols="30" required></textarea><br><br>
-<label for="rating">how satisfied are you?</label><br><br>
-<input type="radio" id="satisfied" name="rating" value="Satisfied">
-<label for="satisfied">Satisfied</label>
-<input type="radio" id="neutral" name="rating" value="Neutral">
-<label for="neutral">Neutral</label>
-<input type="radio" id="dissatisfied" name="rating" value="Dissatisfied">
-<label for="dissatisfied">Dissatisfied</label><br><br>
-</label><button type="submit">Submit</button><br><br>
-
-  <style>
+<html>
+<head>
+<title>Feedback Form</title>
+<style>
     body {
-      font-family:  sans-serif;
+      font-family: sans-serif;
       background-color: #f5f7fa;
-      display: top;
+      margin: 0;
+      display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
     form {
       background-color: rgb(214, 235, 150);
-      padding:50px 30px;
+      padding: 50px 30px;
       border-radius: 5px;
       width: 500px;
-      box-sizing: border-box;
     }
-    h2 {
-      margin-bottom: 20px;
-      color: #333;
+    h1 {
       text-align: center;
+      margin-bottom: 20px;
     }
     label {
-      display: block;
-      margin-bottom: 4px;
       font-weight: 600;
       color: #555;
     }
-    input[type="text"],
-    input[type="email"],
-    textarea {
+    input[type="text"], input[type="email"], textarea {
       width: 100%;
       padding: 8px 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      margin-bottom: 18px;
       font-size: 14px;
-      
+      margin-bottom: 18px;
     }
     textarea {
       min-height: 80px;
     }
     .radio-group {
-      margin-bottom: 5px;
-      color: #555;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-top: 5px;
+      margin-bottom: 18px;
     }
     .radio-group label {
       font-weight: normal;
-      margin-right: 15px;
-    }
-    input[type="radio"] {
-      margin-right: 10px;
-      cursor: pointer;
     }
     button {
       width: 100%;
@@ -84,4 +61,28 @@
     button:hover {
       background-color: #0056b3;
     }
-  </style>
+</style>
+</head>
+<body>
+
+<form action="action_page.php" method="post">
+    <h1>Feedback Form</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="feedbackform">Feedback:</label>
+    <textarea id="feedbackform" name="feedbackform" rows="3" cols="30" required></textarea>
+    <label for="rating">How satisfied are you?</label>
+    <div class="radio-group">
+        <input type="radio" id="satisfied" name="rating" value="Satisfied">
+        <label for="satisfied">Satisfied</label>
+        <input type="radio" id="neutral" name="rating" value="Neutral">
+        <label for="neutral">Neutral</label>
+        <input type="radio" id="dissatisfied" name="rating" value="Dissatisfied">
+        <label for="dissatisfied">Dissatisfied</label>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
